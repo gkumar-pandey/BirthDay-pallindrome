@@ -115,6 +115,10 @@ function getNextPallindromeDate(date) {
 }
 
 btn.addEventListener("click", () => {
+  if(userBirthDate.value==''){
+    alert('Please Enter your BirthDate')
+    return;
+  }
   userBirthDateInArrFormat = userBirthDate.value.split("-");
   date = {
     day: Number(userBirthDateInArrFormat[1]),

@@ -50,7 +50,7 @@ body {
 }
 .output-msg {
   /* border: 1px solid red; */
-  height: 100px;
+  min-height: 100px;
   padding: 18px;
   text-align: center;
   font-size: 1.6rem;
@@ -74,6 +74,19 @@ footer a {
   padding: 4px;
   color: #05595b;
   color: white;
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-bar{
+    font-size: 1.6rem;
+  }
+  .container input {
+    width: 40%;
+  }
+  .btn{
+    width: 30%;
+  }
+
 }
 @media only screen and (max-width: 600px) {
   .nav-bar {
