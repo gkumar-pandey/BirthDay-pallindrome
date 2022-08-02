@@ -121,11 +121,15 @@ btn.addEventListener("click", () => {
     month: Number(userBirthDateInArrFormat[2]),
     year: Number(userBirthDateInArrFormat[0]),
   };
-  if (isAllDateFormatsArePallindrome(date)) {
-    outputMsg.innerText = "Yay!!🥳🥳 Your BirthDay is a Pallindrome..";
-  } else {
-    let [count, nextDate] = getNextPallindromeDate(date);
+  outputMsg.innerHTML = `<img src='https://thumbs.gfycat.com/EnchantingInbornDogwoodtwigborer-size_restricted.gif' />
+  <p>Calculating...</p>`;
+  setTimeout(() => {
+    if (isAllDateFormatsArePallindrome(date)) {
+      outputMsg.innerText = "Yay!!🥳🥳 Your BirthDay is a Pallindrome..";
+    } else {
+      let [count, nextDate] = getNextPallindromeDate(date);
 
-    outputMsg.innerText = `The next Pallindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}, you missed it by ${count} days! 🤪`;
-  }
+      outputMsg.innerText = `The next Pallindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}, you missed it by ${count} days! 🤪`;
+    }
+  }, 5000);
 });
