@@ -121,8 +121,8 @@ btn.addEventListener("click", () => {
   }
   userBirthDateInArrFormat = userBirthDate.value.split("-");
   date = {
-    day: Number(userBirthDateInArrFormat[1]),
-    month: Number(userBirthDateInArrFormat[2]),
+    day: Number(userBirthDateInArrFormat[2]),
+    month: Number(userBirthDateInArrFormat[1]),
     year: Number(userBirthDateInArrFormat[0]),
   };
   outputMsg.innerHTML = `<img src='https://thumbs.gfycat.com/EnchantingInbornDogwoodtwigborer-size_restricted.gif' />
